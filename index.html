@@ -1,0 +1,1043 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Synergy88 Digital BaaS API Documentation 0.0.1</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#synergy88-digital-baas-api-documentation-0-0-1" class="toc-h1 toc-link" data-title="Synergy88 Digital BaaS API Documentation 0.0.1">Synergy88 Digital BaaS API Documentation 0.0.1</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#produces" class="toc-h2 toc-link" data-title="Synergy88 Digital BaaS API Documentation 0.0.1">Produces</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#auth" class="toc-h1 toc-link" data-title="Auth">Auth</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#app-authentication" class="toc-h2 toc-link" data-title="Auth">App authentication</a>
+                  </li>
+                  <li>
+                    <a href="#refresh-token" class="toc-h2 toc-link" data-title="Auth">Refresh token</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#plans" class="toc-h1 toc-link" data-title="Plans">Plans</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-available-subscription-plans-for-specific-app" class="toc-h2 toc-link" data-title="Plans">Get all available subscription plans for specific app.</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#pins" class="toc-h1 toc-link" data-title="Pins">Pins</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#request-pin-to-be-use-for-mobile-charging" class="toc-h2 toc-link" data-title="Pins">Request PIN to be use for mobile charging</a>
+                  </li>
+                  <li>
+                    <a href="#confirm-pin-from-sms-message" class="toc-h2 toc-link" data-title="Pins">Confirm PIN from SMS message</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#subscriptions" class="toc-h1 toc-link" data-title="Subscriptions">Subscriptions</a>
+          </li>
+          <li>
+            <a href="#payments" class="toc-h1 toc-link" data-title="Payments">Payments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#find-payment-by-id" class="toc-h2 toc-link" data-title="Payments">Find payment by ID</a>
+                  </li>
+                  <li>
+                    <a href="#deletes-a-payment" class="toc-h2 toc-link" data-title="Payments">Deletes a payment</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#models" class="toc-h1 toc-link" data-title="Models">Models</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#user" class="toc-h2 toc-link" data-title="Models">User</a>
+                  </li>
+                  <li>
+                    <a href="#tag" class="toc-h2 toc-link" data-title="Models">Tag</a>
+                  </li>
+                  <li>
+                    <a href="#pinsdata" class="toc-h2 toc-link" data-title="Models">PinsData</a>
+                  </li>
+                  <li>
+                    <a href="#pinsconfirmdata" class="toc-h2 toc-link" data-title="Models">PinsConfirmData</a>
+                  </li>
+                  <li>
+                    <a href="#plansdata" class="toc-h2 toc-link" data-title="Models">PlansData</a>
+                  </li>
+                  <li>
+                    <a href="#tokendata" class="toc-h2 toc-link" data-title="Models">TokenData</a>
+                  </li>
+                  <li>
+                    <a href="#authcredentials" class="toc-h2 toc-link" data-title="Models">AuthCredentials</a>
+                  </li>
+                  <li>
+                    <a href="#apiresponse" class="toc-h2 toc-link" data-title="Models">ApiResponse</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='synergy88-digital-baas-api-documentation-0-0-1'>Synergy88 Digital BaaS API Documentation 0.0.1</h1>
+<blockquote>
+<h3 id='produces'>Produces</h3>
+<p><strong>Schemes</strong>: <code>http</code></p>
+</blockquote>
+
+<p><strong>Host</strong>: <code>52.41.53.61</code></p>
+
+<p><strong>Base path</strong>: <code>/baas/public/api/v1/apps/{app_id}</code></p>
+<h1 id='auth'>Auth</h1><h2 id='app-authentication'>App authentication</h2><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/baas/public/api/v1/apps/{app_id}/authenticate</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_issued_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_expired"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">401</span> <span class="ne">Unauthorized</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">405</span> <span class="ne">Method Not Allowed</span>
+</code></pre><h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>body<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>body</td>
+<td><a href="#authcredentials">AuthCredentials</a></td>
+<td>Authentication credentials</td>
+</tr>
+<tr>
+<td>api_key<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>query</td>
+<td>string</td>
+<td>API Key</td>
+</tr>
+<tr>
+<td>api_secret<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>query</td>
+<td>string</td>
+<td>API secret</td>
+</tr>
+</tbody></table>
+<h3 id='responses'>Responses</h3>
+<table><thead>
+<tr>
+<th>Http code</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="#tokendata">TokenData</a></td>
+<td>Return token</td>
+</tr>
+<tr>
+<td>401</td>
+<td>no content</td>
+<td>Unauthorized</td>
+</tr>
+<tr>
+<td>405</td>
+<td>no content</td>
+<td>Invalid input</td>
+</tr>
+</tbody></table>
+<h2 id='refresh-token'>Refresh token</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/baas/public/api/v1/apps/{app_id}/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_issued_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_expired"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">405</span> <span class="ne">Method Not Allowed</span>
+</code></pre>
+<p>Token may expire in a given time. So the app must request to refresh a token</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>token<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>query</td>
+<td>string</td>
+<td>Auth Token</td>
+</tr>
+</tbody></table>
+<h3 id='responses-2'>Responses</h3>
+<table><thead>
+<tr>
+<th>Http code</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="#tokendata">TokenData</a></td>
+<td>Return token</td>
+</tr>
+<tr>
+<td>405</td>
+<td>no content</td>
+<td>Invalid input</td>
+</tr>
+</tbody></table>
+<h1 id='plans'>Plans</h1><h2 id='get-all-available-subscription-plans-for-specific-app'>Get all available subscription plans for specific app.</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/baas/public/api/v1/apps/{app_id}/plans</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"app_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mobile_charging_provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"interval_word"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"raffle_ticket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">401</span> <span class="ne">Unauthorized</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">405</span> <span class="ne">Method Not Allowed</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">500</span> <span class="ne">Internal Server Error</span>
+</code></pre>
+<p>Get all available subscription plans for specific app. This include all subscription prices.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>token<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>query</td>
+<td>string</td>
+<td>Auth Token</td>
+</tr>
+</tbody></table>
+<h3 id='responses-3'>Responses</h3>
+<table><thead>
+<tr>
+<th>Http code</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="#plansdata">PlansData</a></td>
+<td>Returm Data</td>
+</tr>
+<tr>
+<td>400</td>
+<td>no content</td>
+<td>Some error in input</td>
+</tr>
+<tr>
+<td>401</td>
+<td>no content</td>
+<td>Unauthorized</td>
+</tr>
+<tr>
+<td>405</td>
+<td>no content</td>
+<td>Invalid input</td>
+</tr>
+<tr>
+<td>500</td>
+<td>no content</td>
+<td>Internal server error</td>
+</tr>
+</tbody></table>
+<h1 id='pins'>Pins</h1><h2 id='request-pin-to-be-use-for-mobile-charging'>Request PIN to be use for mobile charging</h2><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/baas/public/api/v1/apps/{app_id}/subscriptions/pins</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"plan_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">405</span> <span class="ne">Method Not Allowed</span>
+</code></pre><h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>body<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>body</td>
+<td><a href="#pinsdata">PinsData</a></td>
+<td>Object that needs to be added to...</td>
+</tr>
+</tbody></table>
+<h3 id='responses-4'>Responses</h3>
+<table><thead>
+<tr>
+<th>Http code</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>405</td>
+<td>no content</td>
+<td>Invalid input</td>
+</tr>
+</tbody></table>
+<h2 id='confirm-pin-from-sms-message'>Confirm PIN from SMS message</h2><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/baas/public/api/v1/apps/{app_id}/subscriptions/pins/confirm</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"plan_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"app_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">405</span> <span class="ne">Method Not Allowed</span>
+</code></pre><h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>body<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>body</td>
+<td><a href="#pinsconfirmdata">PinsConfirmData</a></td>
+<td>Object that needs to be added to...</td>
+</tr>
+</tbody></table>
+<h3 id='responses-5'>Responses</h3>
+<table><thead>
+<tr>
+<th>Http code</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>405</td>
+<td>no content</td>
+<td>Invalid input</td>
+</tr>
+</tbody></table>
+<h1 id='subscriptions'>Subscriptions</h1><h1 id='payments'>Payments</h1><h2 id='find-payment-by-id'>Find payment by ID</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/baas/public/api/v1/apps/{app_id}/payments/{paymentId}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">404</span> <span class="ne">Not Found</span>
+</code></pre>
+<p>Returns a single payment</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>paymentId<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>path</td>
+<td>integer</td>
+<td>ID of payment to return</td>
+</tr>
+</tbody></table>
+<h3 id='responses-6'>Responses</h3>
+<table><thead>
+<tr>
+<th>Http code</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>no content</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>400</td>
+<td>no content</td>
+<td>Invalid ID supplied</td>
+</tr>
+<tr>
+<td>404</td>
+<td>no content</td>
+<td>Payment not found</td>
+</tr>
+</tbody></table>
+<h2 id='deletes-a-payment'>Deletes a payment</h2><pre class="highlight http tab-http"><code><span class="nf">DELETE</span> <span class="nn">/baas/public/api/v1/apps/{app_id}/payments/{paymentId}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">api_key</span><span class="p">:</span> <span class="s">string</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">404</span> <span class="ne">Not Found</span>
+</code></pre><h3 id='parameters-7'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>api_key</td>
+<td>header</td>
+<td>string</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td>paymentId<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>path</td>
+<td>integer</td>
+<td>Payment id to delete</td>
+</tr>
+</tbody></table>
+<h3 id='responses-7'>Responses</h3>
+<table><thead>
+<tr>
+<th>Http code</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>no content</td>
+<td>Invalid ID supplied</td>
+</tr>
+<tr>
+<td>404</td>
+<td>no content</td>
+<td>Payment not found</td>
+</tr>
+</tbody></table>
+<h1 id='models'>Models</h1><h2 id='user'>User</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"userStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='fields'>Fields</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>int64</td>
+<td></td>
+</tr>
+<tr>
+<td>username</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>firstName</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lastName</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>userStatus</td>
+<td>integer</td>
+<td>int32</td>
+<td>User Status</td>
+</tr>
+</tbody></table>
+<h2 id='tag'>Tag</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='fields-2'>Fields</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>int64</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='pinsdata'>PinsData</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"plan_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='fields-3'>Fields</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>phone_number<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>plan_id<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='pinsconfirmdata'>PinsConfirmData</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"plan_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"app_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='fields-4'>Fields</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>phone_number<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>plan_id<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>code<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>app_id<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='plansdata'>PlansData</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"app_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mobile_charging_provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"interval_word"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"raffle_ticket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='fields-5'>Fields</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mobile_charging_provider</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>interval</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>interval_word</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>raffle_ticket</td>
+<td>integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='tokendata'>TokenData</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_issued_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_expired"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='fields-6'>Fields</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>token</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>token_issued_at</td>
+<td>string</td>
+<td></td>
+<td>ISO 8601 Format</td>
+</tr>
+<tr>
+<td>token_expired</td>
+<td>string</td>
+<td></td>
+<td>ISO 8601 Format</td>
+</tr>
+</tbody></table>
+<h2 id='authcredentials'>AuthCredentials</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='fields-7'>Fields</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>password<span title="required" class="required">&nbsp;*&nbsp;</span></td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='apiresponse'>ApiResponse</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='fields-8'>Fields</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>code</td>
+<td>integer</td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<style>
+    ul.enum {
+        margin: 0;
+        padding: 0 0 0 2px;
+        list-style-position: inside;
+    }
+    .required {
+        color: red;
+        font-weight: bold;
+    }
+    a.pseudo {
+        border-bottom:1px dashed; 
+        text-decoration: none;
+    }
+</style>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
